@@ -5,6 +5,7 @@ from pydantic import BaseModel
 from typing import List
 import json
 import uvicorn
+import os
 from sentence_transformers import SentenceTransformer, util
 import torch
 
@@ -83,4 +84,5 @@ def recommend_assessments(request: RecommendRequest):
     return JSONResponse(content=jsonable_encoder(response))
 
 if __name__ == "__main__":
-    uvicorn.run(app, host="0.0.0.0", port=8000)
+    port = int(os.environ.get("PORT", 8000))
+    uvicorn.run(app, host="0.0.0.0", port=port)
