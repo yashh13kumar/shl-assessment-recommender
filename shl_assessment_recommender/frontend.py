@@ -1,7 +1,7 @@
 import streamlit as st
 import requests
 
-API_URL = "https://shl-assessment-recommender-yj81.onrender.com"
+API_URL = "http://localhost:8000"
 
 st.title("SHL Assessment Recommendation System")
 
