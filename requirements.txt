@@ -1,7 +1,6 @@
 fastapi
 uvicorn
-pydantic
 sentence-transformers
 torch
 streamlit
-requests
+huggingface_hub[hf_xet]
